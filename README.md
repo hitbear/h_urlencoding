@@ -23,7 +23,17 @@ The binaries `urldecode` and `urlencode` are in the `target/` directory.
 
 How fast is this program?
 
-Use the shell script in the time_measurement directory to run a challange. 
+Use the shell script in the `time_measurement` directory to run a challange. 
+
+This script calculates multiple times the urlencoding of an example string (see the two variations below) and measures the time. After this we compare the everage duration. 
+The following output of the script shows that sed needs more time.
+
+    Number of tests: 5000
+    Mean duration sed:
+    .00332600000000000000
+    Mean duration Rust :
+    .00129280000000000000
+
 
 
 ### With sed alias
@@ -59,6 +69,7 @@ to run some tests defined in the `lib.rs` file.
 ### Still to do
 
   * Encode and decode binary files.
+  * Use different example strings in the time measurement script.
 
 
 ## References
